@@ -25,7 +25,8 @@ header h1 {
     margin: 20px auto;
     padding: 20px;
     width: 90%;
-    background: rgba(30, 60, 114, 0.5); /* Cor de fundo semi-transparente */
+    background-color: #1e3c72; /* Fallback para navegadores antigos */
+    background-color: rgba(30, 60, 114, 0.5); /* Fundo semi-transparente */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     text-align: left;
@@ -39,7 +40,7 @@ header h1 {
     background-size: cover; /* Faz a imagem cobrir o container */
     background-position: center;
     padding: 20px 0;
-    z-index: 1;
+    z-index: 0; /* Certifique-se de que esta camada está atrás da .quiz */
 }
 
 .quiz-container::before {
