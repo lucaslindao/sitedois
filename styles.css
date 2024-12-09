@@ -1,0 +1,161 @@
+/* Configurações básicas */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #8b0000;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffdd57;
+}
+
+/* Seção do quiz com imagem de fundo */
+.quiz {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.quiz-container {
+    position: relative;
+    background-image: url('back.jpg'); /* Substitua pelo caminho da imagem */
+    background-size: cover; /* Faz a imagem cobrir o container */
+    background-position: center;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.quiz-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adiciona um overlay escuro para contraste */
+    z-index: 0;
+}
+
+.quiz .pergunta {
+    margin-bottom: 30px;
+}
+
+.quiz .pergunta h2 {
+    font-size: 1.8rem; /* Tamanho maior para perguntas */
+    margin-bottom: 15px;
+}
+
+.quiz .pergunta label {
+    font-size: 1.5rem; /* Aumenta o tamanho das alternativas */
+    line-height: 2rem; /* Espaçamento entre as linhas */
+    display: block; /* Torna cada alternativa ocupando uma linha completa */
+    margin-bottom: 10px; /* Espaçamento entre alternativas */
+    padding: 10px;
+    border: 2px solid transparent; /* Para foco visual */
+    border-radius: 5px;
+}
+
+.quiz .pergunta label:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.quiz button {
+    display: block;
+    width: 100%;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.5rem; /* Aumenta o tamanho do botão */
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.quiz button:hover {
+    background-color: #ffdd57;
+    color: #8b0000;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed; /* Garante que o modal fique fixo na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999; /* Garante que o modal estará acima de outros elementos */
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    color: black;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+}
+
+.modal-content img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem; /* Aumenta o tamanho do botão de fechar */
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .quiz .pergunta h2 {
+        font-size: 1.6rem;
+    }
+
+    .quiz .pergunta label {
+        font-size: 1.4rem;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .quiz button {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+}

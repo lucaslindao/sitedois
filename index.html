@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Natal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🎅 Quiz de Natal 🎄</h1>
+    </header>
+    <main>
+        <div class="quiz-container">
+            <section class="quiz">
+                <form id="quizForm">
+                    <div class="pergunta">
+                        <h2>1. Onde surgiu a tradição da árvore de Natal?</h2>
+                        <label><input type="radio" name="q1" value="a"> Alemanha</label><br>
+                        <label><input type="radio" name="q1" value="b"> França</label><br>
+                        <label><input type="radio" name="q1" value="c"> Inglaterra</label>
+                    </div>
+                    <div class="pergunta">
+                        <h2>2. O que São Nicolau colocava nas meias?</h2>
+                        <label><input type="radio" name="q2" value="a"> Doces</label><br>
+                        <label><input type="radio" name="q2" value="b"> Brinquedos</label><br>
+                        <label><input type="radio" name="q2" value="c"> Moedas</label>
+                    </div>
+                    <div class="pergunta">
+                        <h2>3. Qual cor o Papai Noel usava antes do vermelho?</h2>
+                        <label><input type="radio" name="q3" value="a"> Azul</label><br>
+                        <label><input type="radio" name="q3" value="b"> Verde</label><br>
+                        <label><input type="radio" name="q3" value="c"> Amarelo</label>
+                    </div>
+                    <button type="button" onclick="verificarRespostas()">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Parabéns! Você acertou todas! 🎉</h2>
+            <img src="win.avif" alt="Imagem de Natal">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
